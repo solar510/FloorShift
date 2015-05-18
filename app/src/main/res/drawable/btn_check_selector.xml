@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- checked -->
+    <item android:drawable="@drawable/ic_checkin" android:state_checked="true"/>
+    <!-- unchecked -->
+    <item android:drawable="@drawable/ic_checkout" android:state_checked="false"/>
+    <!-- default -->
+    <item android:drawable="@drawable/ic_checkout" />
+
+</selector>

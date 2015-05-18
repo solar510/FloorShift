@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".LoginActivity">
+
+    <include layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:layout_below="@+id/lay_title"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_color"
+            android:text="@string/forgot_enter_email_address"
+            android:textSize="22sp"/>
+
+        <LinearLayout
+            android:layout_marginTop="26dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_corners"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/edit_email"
+                style="@style/HoT.EditText"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_okcancel"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btn_cancel"
+                android:clickable="true"
+                android:onClick="onCancelClick"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/btn_ok"
+                android:onClick="onOkClick"
+                android:clickable="true"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

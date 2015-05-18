@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_titlebar"
+    android:layout_alignParentTop="true"
+    android:layout_width="fill_parent"
+    android:background="@color/actionbar_bg"
+    android:layout_height="@dimen/margin_55">
+    <ImageView
+        android:layout_width="@dimen/margin_55"
+        android:layout_height="@dimen/margin_55"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/btn_back"
+        android:scaleType="center"
+        android:background="@drawable/menu_selector_black"
+        android:src="@drawable/ic_back" />
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="28sp"/>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/btn_setting"
+        android:clickable="true"
+        android:src="@drawable/ic_share"
+        android:background="@drawable/menu_selector_red"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        android:onClick="onSettingClick"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/margin_55"
+        android:layout_height="@dimen/margin_55"/>
+</RelativeLayout>

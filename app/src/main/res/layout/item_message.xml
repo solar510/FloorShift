@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/lay_message"
+    android:layout_height="@dimen/dimen_90">
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/dimen_6"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/lay_img"
+        android:layout_width="@dimen/dimen_65"
+        android:layout_height="@dimen/dimen_65"
+        android:layout_gravity="center">
+        <com.floor.shift.customview.RoundedImageView
+            android:id="@+id/img_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img_user"
+            android:layout_gravity="center"
+            android:scaleType="fitXY" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/dimen_6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@+id/lay_times"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/lay_txt"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/playbar_desc"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_public"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="@dimen/dimen_65"
+                    android:layout_height="@dimen/dimen_65"
+                    android:layout_gravity="center">
+                    <com.floor.shift.customview.RoundedImageView
+                        android:id="@+id/img_public"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img_user"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY" />
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txt_public_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_public_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/playbar_desc"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/lay_times"
+            android:layout_width="@dimen/dimen_65"
+            android:background="@color/txt_color"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_marginLeft="@dimen/dimen_2"
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="left|center_vertical"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

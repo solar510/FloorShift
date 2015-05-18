@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/lay_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_55">
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/margin_55"
+                android:layout_alignParentLeft="true"
+                android:scaleType="center"
+                android:layout_height="@dimen/margin_55"
+                android:background="@drawable/menu_selector_red"
+                android:src="@drawable/ic_back_arrow" />
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@android:color/white"
+                    android:text="@string/edit_profile"
+                    android:textStyle="bold"
+                    android:textSize="28sp"/>
+            </RelativeLayout>
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/btn_save"
+                android:layout_marginRight="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:text="Save"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="145dp"
+                    android:layout_height="145dp">
+
+                    <com.floor.shift.customview.PolygonImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        app:poly_border="true"
+                        android:src="@drawable/man_pictogram"
+                        app:poly_border_color="@color/profile_border"
+                        app:poly_border_width="5dp"
+                        app:poly_corner_radius="5"
+                        app:poly_rotation_angle="0"
+                        app:poly_shadow="true"
+                        android:scaleType="fitXY"
+                        app:poly_vertices="0" />
+
+                    <ImageView
+                        android:id="@+id/btn_addphoto"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_camera"
+                        android:padding="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_marginTop="35dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/rounded_corners"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/edit_nickname"
+                            style="@style/HoT.EditText"
+                            android:layout_margin="5dp"
+                            android:hint="ENTER YOUR SCREEN NAME"
+                            android:inputType="textPersonName"
+                            android:padding="5dp" />
+
+                        <View style="@style/HoT.LoginSeparator" />
+
+                        <EditText
+                            android:id="@+id/edit_email"
+                            style="@style/HoT.EditText"
+                            android:layout_margin="5dp"
+                            android:hint="ENTER YOUR EMAIL ADDRESS"
+                            android:inputType="textEmailAddress"
+                            android:padding="5dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/lay_gender"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/checkbox_male"
+                            android:layout_width="100dp"
+                            android:layout_weight="1"
+                            android:layout_height="50dp" />
+                        <TextView
+                            android:id="@+id/checkbox_female"
+                            android:layout_width="100dp"
+                            android:layout_weight="1"
+                            android:layout_height="50dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/take_photo" />
+    </LinearLayout>
+
+</RelativeLayout>

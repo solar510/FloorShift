@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:id="@+id/lay_root"
+    tools:context=".MainActivity">
+    <ListView
+        android:id="@+id/list_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:divider="@color/divider"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none"
+        android:smoothScrollbar="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        android:background="@android:color/black"
+        android:id="@+id/lay_hidden_profile"
+        android:layout_height="wrap_content">
+        <include layout="@layout/profile_header_bottom"/>
+    </LinearLayout>
+</RelativeLayout>
