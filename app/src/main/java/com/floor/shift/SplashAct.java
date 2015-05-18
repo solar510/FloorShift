@@ -25,7 +25,6 @@ public class SplashAct extends Activity {
 
         setContentView(R.layout.activity_splash);
 
-
         IntentLauncher launcher = new IntentLauncher();
         launcher.start();
 
